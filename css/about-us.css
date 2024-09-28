@@ -1,0 +1,257 @@
+/*Desplazamiento suave con CSS*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    box-sizing: border-box; /*Formatear documento*/
+    margin: 0; /*Borde  en cero*/
+    padding: 0; /*Margen en cero*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-weight: 400;
+    font-style: normal; */
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.nav-container{
+    background-color: #b2e4ff;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 2%;
+    /* border-style: solid;
+    border-width: 1px; */
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container .logo{
+    cursor: pointer;
+}
+
+.nav-container .logo img{
+    height: 55px;
+    width: auto;
+    border-color: black;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.3s;
+
+}
+
+.nav-container img:hover{
+    transform: scale(1.1);
+}
+
+.nav-container .nav-links{
+    list-style: none;
+} 
+
+.nav-container .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-container .nav-links li:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+
+.nav-container .nav-links a{
+    font-size: 700;
+    color: rgb(89, 88, 88);
+    text-decoration: none;
+}
+
+.nav-container .nav-links li a:hover{
+    color: black;
+}
+
+.nav-container .btn-nav{
+    margin-left: auto;
+}
+
+.nav-container .btn-nav button{
+    font-weight: 700;
+    color: rgb(89, 88, 88);
+    padding: 9px 25px;
+    margin-left: 20px;
+    background-color: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-container .btn-nav button:hover{
+    background-color: #e2f1f8;
+    color: black;
+    transform: scale(1.1);
+}
+
+/*Mapa*/
+
+.mapa{
+    border: 5px solid rgb(89, 88, 88);
+    border-radius: 10px;
+    width: fit-content; /* Ajustar el tamaño al contenido */
+    margin: 20px auto; /* Centrar en la página */
+    margin-bottom: 100px; /* Agregar margen inferior */
+}
+
+/*Hipervínculos*/
+
+section{
+    width: 55%;
+    padding-left: 100px;
+}
+
+.info{
+    position: relative;
+    top: 70px;
+}
+
+.info h2{
+    font-size: 30px;
+    color: rgb(89, 88, 88);
+    margin: 15px;
+    padding-top: 25px;
+}
+
+.info h2:hover{
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.info h3{
+    margin: 15px;
+    color: rgb(89, 88, 88);
+}
+
+
+.info p{
+    font-size: 16px;
+    color: rgb(89, 88, 88);
+    margin: 15px;
+}
+
+
+/*MediaQuerys*/
+
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-container .nav-links li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    section {
+        width: 90%; /* Aumentar el ancho para que se ajuste mejor */
+        padding-left: 0; /* Quitar el padding lateral */
+    }
+
+    .info {
+        top: 100px; /* Ajustar la posición */
+        padding: 0 10px; /* Agregar padding lateral */
+    }
+    
+    .info h2 {
+        font-size: 24px; /* Disminuir tamaño de fuente */
+    }
+    
+    .info p {
+        font-size: 14px; /* Disminuir tamaño de fuente */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+    }
+    
+    section {
+        width: 80%; /* Ajustar el ancho para que se vea mejor */
+        padding-left: 20px; /* Ajustar padding */
+    }
+    
+    .info h2 {
+        font-size: 28px; /* Tamaño de fuente moderado */
+    }
+    
+    .info p {
+        font-size: 15px; /* Tamaño de fuente moderado */
+    }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 769px) {
+    .nav-container .nav-links li {
+        padding: 0px 30px; /* Aumentar el padding para pantallas grandes */
+    }
+    
+    .info {
+        padding: 0 50px; /* Aumentar padding lateral */
+    }
+}
+
+/*Footer*/
+/*Footer bar*/
+
+.footer-bar{
+    width: 100%;
+    height: 275px;
+    background-color: #b2e4ff;
+    position: relative;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+
+.footer-bar p{
+    text-align: center;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.nav-footer .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-footer .nav-links li a{
+    text-decoration: none;
+    color:black;
+}
+
+.nav-footer .nav-links li:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+
+

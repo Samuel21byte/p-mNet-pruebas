@@ -1,0 +1,202 @@
+/*Desplazamiento suave con CSS*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/*Header*/
+
+.nav-container{
+    background-color: #b2e4ff;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    padding: 0px 2%;
+    /* border-style: solid;
+    border-width: 1px; */
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container .logo{
+    cursor: pointer;
+}
+
+.nav-container .logo img{
+    height: 55px;
+    width: auto;
+    border-color: black;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.3s;
+
+}
+
+.nav-container img:hover{
+    transform: scale(1.1);
+}
+
+.nav-container .nav-links{
+    list-style: none;
+} 
+
+.nav-container .nav-links li{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav-container .nav-links li:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+
+.nav-container .nav-links a{
+    font-size: 700;
+    color: rgb(89, 88, 88);
+    text-decoration: none;
+}
+
+.nav-container .nav-links li a:hover{
+    color: black;
+}
+
+/*Main: Producto*/
+/* Contenedor general de productos */
+.amazon-container {
+    display: flex;
+    justify-content: center; /* Centrar el producto */
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Tarjeta individual del producto */
+.amazon-product-card {
+    display: flex; /* Flexbox para colocar la imagen y detalles en línea */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 95%; /* Ocupa casi todo el ancho de la pantalla */
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 20px 0; /* Espacio entre cada producto */
+    padding: 20px;
+    text-align: left; /* Alinear el texto a la izquierda */
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto: Más grande */
+.amazon-product-card img {
+    width: 350px; /* Aumentar el tamaño de la imagen */
+    height: auto;
+    object-fit: contain; /* Ajusta la imagen sin distorsión */
+    border-radius: 4px;
+    margin-right: 20px; /* Espacio entre la imagen y los detalles */
+}
+
+/* Detalles del producto (nombre, descripción, precio) */
+.product-details {
+    display: flex;
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: space-between; /* Distribuir el contenido uniformemente */
+    flex-grow: 1; /* El contenedor de detalles se expandirá según sea necesario */
+}
+
+/* Nombre del producto */
+.amazon-product-card h3 {
+    font-size: 2em; /* Aumentar el tamaño de la fuente */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Descripción del producto */
+.amazon-product-card p {
+    font-size: 1.2em; /* Aumentar el tamaño de la descripción */
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Botón con el precio */
+.price-btn {
+    background-color: #ffa41c;
+    color: white;
+    padding: 15px 25px; /* Aumentar el tamaño del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Aumentar el tamaño del texto */
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alinear el botón al inicio */
+}
+
+.price-btn:hover {
+    background-color: #ff9900; /* Color más oscuro en hover */
+}
+
+/* Efecto de hover sobre la tarjeta del producto */
+.amazon-product-card:hover {
+    transform: scale(1.02); /* Un poco más pequeño para evitar que se superponga al borde */
+}
+
+
+
+
+/*Footer*/
+
+.footer-bar{
+    width: 100%;
+    height: 275px;
+    background-color: #b2e4ff;
+    position: relative;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+
+.footer-bar p{
+    text-align: center;
+}
+
+
+.nav-footer .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-footer .nav-links li a{
+    text-decoration: none;
+    color:black;
+}
+
+.nav-footer .nav-links li:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
